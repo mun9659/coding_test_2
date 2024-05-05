@@ -2,8 +2,6 @@ package leetcode;
 
 import leetcode.common.ListNode;
 
-import java.util.List;
-
 public class Q876 {
 
     public static void main(String[] args) {
