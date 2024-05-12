@@ -21,34 +21,30 @@ public class Q2373 {
     }
 
     public static int[][] largestLocal(int[][] grid) {
-        return null;
+
+        int n = grid.length;
+
+        int[][] result = new int[n - 2][n - 2];
+        for(int i = 0; i <= n - 3; i++) {
+            for(int j = 0; j <= n - 3; j++) {
+                result[i][j] = maxValue(i, j, grid);
+            }
+        }
+
+        return result;
     }
 
-    // public static int[][] largestLocal(int[][] grid) {
-    //
-    //     int n = grid.length;
-    //
-    //     int[][] result = new int[n - 2][n - 2];
-    //     for(int i = 0; i <= n - 3; i++) {
-    //         for(int j = 0; j <= n - 3; j++) {
-    //             result[i][j] = maxValue(i, j, grid);
-    //         }
-    //     }
-    //
-    //     return result;
-    // }
-    //
-    // public static int maxValue(int y, int x, int[][] grid) {
-    //
-    //     int max = 0;
-    //     for(int i = 0; i < 3; i++) {
-    //         for(int j = 0; j < 3; j++) {
-    //             System.out.println(grid[y + i][x + j]);
-    //             max = Math.max(grid[y + i][x + j], max);
-    //         }
-    //     }
-    //
-    //     return max;
-    // }
+    public static int maxValue(int y, int x, int[][] grid) {
+
+        int max = 0;
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                System.out.println(grid[y + i][x + j]);
+                max = Math.max(grid[y + i][x + j], max);
+            }
+        }
+
+        return max;
+    }
 
 }
