@@ -12,14 +12,14 @@ public class Q344 {
         // Write a function that reverses a string. The input string is given as an array of characters s.
         //
         // You must do this by modifying the input array in-place with O(1) extra memory.
-        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        //
-        // char[] s = br.readLine().toCharArray();
-        char[] s_arr = {'A',' ','m','a','n',',',' ','a',' ','p','l','a','n',',',' ','a',' ','c','a','n','a','l',':',' ','P','a','n','a','m','a'};
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        reverseString(s_arr);
+        char[] s = br.readLine().toCharArray();
+        // char[] s_arr = {'A',' ','m','a','n',',',' ','a',' ','p','l','a','n',',',' ','a',' ','c','a','n','a','l',':',' ','P','a','n','a','m','a'};
 
-        System.out.println(s_arr);
+        reverseString(s);
+
+        System.out.println(s);
     }
 
     private static void reverseString(char[] s) {
